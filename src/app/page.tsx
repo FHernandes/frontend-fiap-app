@@ -4,7 +4,6 @@ export default function Home() {
     <>
       <Navbar />
       <div>
-        <p>Nabar</p>
         <p>Header</p>
         <p>Intro</p>
         <p>Água</p>
