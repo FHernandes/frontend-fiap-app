@@ -1,0 +1,11 @@
+@import './assets/fonts/gotham.css';
+
+html,
+body {
+  margin: 0;
+  background: #000000;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Gotham', sans-serif;
+  color: white;
+}
