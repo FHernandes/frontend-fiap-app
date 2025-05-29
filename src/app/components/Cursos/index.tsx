@@ -21,7 +21,8 @@ interface CursosProps {
 
 const Cursos = ({ setStage }: CursosProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const coursesRef = useRef<HTMLDivElement>(null);
+  const mobileCoursesRef = useRef<HTMLDivElement>(null);
+  const desktopCoursesRef = useRef<HTMLDivElement>(null);
   const [selectedCategory, setSelectedCategory] = useState('tecnologia');
 
   useGSAP(() => {
@@ -35,9 +36,15 @@ const Cursos = ({ setStage }: CursosProps) => {
   }, []);
 
   useEffect(() => {
-    if (coursesRef.current) {
+    const isMobile = window.innerWidth <= 768;
+
+    const target = isMobile
+      ? mobileCoursesRef.current
+      : desktopCoursesRef.current;
+
+    if (target) {
       gsap.fromTo(
-        coursesRef.current,
+        target,
         { autoAlpha: 0, y: -20 },
         { autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out' },
       );
@@ -80,7 +87,7 @@ const Cursos = ({ setStage }: CursosProps) => {
                 </div>
 
                 {isSelected && (
-                  <div className={style.mobileCourses} ref={coursesRef}>
+                  <div className={style.mobileCourses} ref={mobileCoursesRef}>
                     <div className={style.courseContainer}>
                       <div className={style.line} />
                       {cat.items.map((course, i) => (
@@ -102,7 +109,7 @@ const Cursos = ({ setStage }: CursosProps) => {
         </div>
 
         {/* DESKTOP VIEW */}
-        <div className={style.courses} ref={coursesRef}>
+        <div className={style.courses} ref={desktopCoursesRef}>
           <div key={selectedCategory} className={style.courseContainer}>
             <p className={style.title2}>
               {courseData.find((c) => c.category === selectedCategory)?.title}
