@@ -81,13 +81,13 @@
 
   @include device.respond-to(desktopM) {
     font-size: 16rem;
+    line-height: 7.6875rem;
     padding: 2rem;
   }
 
   @include device.respond-to(mobileLy) {
     top: 3.5rem;
     font-size: 9.375rem;
-    line-height: 7.6875rem;
   }
 
   @include device.respond-to(mobileLx) {

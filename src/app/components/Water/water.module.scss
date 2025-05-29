@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
   padding: 1.6875rem;
+
+  @include device.respond-to(mobileLy) {
+    display: none;
+  }
 }
 
 .text1 {
@@ -23,11 +27,6 @@
   @include device.respond-to(desktopM) {
     font-size: 4.25rem;
     line-height: 3.8rem;
-  }
-
-  @include device.respond-to(mobileLy) {
-    font-size: 2.25rem;
-    line-height: 2.2rem;
   }
 }
 
