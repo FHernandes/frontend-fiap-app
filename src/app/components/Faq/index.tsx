@@ -80,14 +80,13 @@ const Faq = ({ setStage }: FaqProps) => {
           <p className={style.subTitle}>Dúvidas Frequentes</p>
         </div>
 
-        <div className={style.courses}>
+        <div className={style.items}>
           {CoursesFaqData.map((course, i) => (
             <div
               key={i}
               className={`${style.courseContainer} ${
                 openItem.includes(i) ? style.open : ''
               }`}
-              ref={(el) => (itemsRef.current[i] = el)}
               onClick={() => toggleItem(i)}
             >
               <div className={style.line} />

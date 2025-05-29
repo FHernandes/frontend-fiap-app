@@ -21,15 +21,27 @@
   font-size: 5.75rem;
   line-height: 4.375rem;
   margin-bottom: 1.25rem;
+
+  @include device.respond-to(mobileLy) {
+    font-size: 3.25rem;
+    line-height: 3.75rem;
+    margin: 0;
+  }
 }
 
 .subTitle {
   font-size: 1.375rem;
   color: #f80d5a;
   line-height: 1.6875rem;
+
+  @include device.respond-to(mobileLy) {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    margin: 0 0 0.375rem 0;
+  }
 }
 
-.courses {
+.items {
   margin-top: 7.875rem;
   margin-bottom: 22rem;
   display: grid;
@@ -47,6 +59,11 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, auto);
+  }
+
+  @include device.respond-to(mobileLy) {
+    margin-top: 2.6875rem;
+    margin-bottom: 8.75rem;
   }
 }
 
@@ -72,8 +89,8 @@
     }
   }
 
-  @include device.respond-to(mobileLx) {
-    width: 100%;
+  @include device.respond-to(mobileSy) {
+    width: 21.25rem;
   }
 }
 
@@ -100,6 +117,10 @@
   :hover {
     width: 100%;
     background-color: #ed145b;
+  }
+
+  @include device.respond-to(mobileLy) {
+    width: 3.8125rem;
   }
 }
 
