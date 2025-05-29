@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FIAP - Landing Page
 
-## Getting Started
+Este projeto é parte de um desafio técnico para a criação de uma landing page seguindo a identidade visual da FIAP. O layout foi disponibilizado no Figma e implementado com foco em responsividade e performance, utilizando tecnologias modernas do ecossistema React.
 
-First, run the development server:
+##  Demonstrações
+
+### Desktop (1920x1080)
+![image](https://github.com/user-attachments/assets/d9c9f774-6160-4434-ba03-27afe3d04385)
+![image](https://github.com/user-attachments/assets/a940a192-30f3-4f1b-aa90-12253ccff508)
+![image](https://github.com/user-attachments/assets/54ecf934-ebf1-4dee-991d-ac715226609f)
+![image](https://github.com/user-attachments/assets/3498aa06-1eeb-4384-9ae8-793666d40cd4)
+![image](https://github.com/user-attachments/assets/1b0841e4-253b-4ead-acd8-0e4a0580cd2e)
+
+
+
+
+### Mobile (414x736)
+![image](https://github.com/user-attachments/assets/cf1fa1fe-076c-464c-93cc-056fa931e98e)
+![image](https://github.com/user-attachments/assets/2b4f425d-5940-4d7d-a800-2e6344467253)
+![image](https://github.com/user-attachments/assets/7739ed18-faef-4e9c-86bf-ab4cd920f1f2)
+![image](https://github.com/user-attachments/assets/e2c3bc40-1f7d-4ec1-8bb3-14b2dbd82c67)
+
+
+
+
+---
+
+##  Tecnologias Utilizadas
+
+- **Next.js** – Framework React para renderização server-side e geração de páginas estáticas.
+- **TypeScript** – Superset de JavaScript que adiciona tipagem estática.
+- **SCSS (Sass)** – Pré-processador CSS para organização de estilos.
+- **GSAP + ScrollTrigger** – Utilizado para animações baseadas em rolagem.
+- **CSS Modules** – Escopo de estilo isolado para cada componente.
+
+---
+
+##  Instalação e Execução
+
+1. **Clone o repositório**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/FHernandes/frontend-fiap-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Instale as dependências**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Execute o projeto em ambiente de desenvolvimento**
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Acesse http://localhost:3000 para visualizar a aplicação.**
