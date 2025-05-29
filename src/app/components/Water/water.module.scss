@@ -1,0 +1,38 @@
+@use '../../_utils/devices' as device;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6875rem;
+}
+
+.text1 {
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 6.875rem;
+  line-height: 5.8125rem;
+  letter-spacing: -5%;
+  vertical-align: middle;
+
+  @include device.respond-to(desktopM) {
+    font-size: 4.25rem;
+    line-height: 3.8rem;
+  }
+
+  @include device.respond-to(mobileLy) {
+    font-size: 2.25rem;
+    line-height: 2.2rem;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
