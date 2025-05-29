@@ -1,0 +1,30 @@
+$breakpoints: (
+  mobileSx: 320px,
+  mobileMx: 360px,
+  mobileLx: 414px,
+  mobileSy: 568px,
+  mobileMy: 640px,
+  mobileLy: 736px,
+
+  tabletSx: 768px,
+  tabletMx: 820px,
+  tabletLx: 1024px,
+  tabletSy: 1024px,
+  tabletMy: 1180px,
+  tabletLy: 1366px,
+
+  desktopXS: 1024px,
+  desktopS: 1280px,
+  desktopM: 1366px,
+  desktopL: 1440px,
+  desktopXL: 1600px,
+  desktopXXL: 1920px,
+  desktopXXXL: 2560px,
+  desktopXXXXL: 3840px,
+);
+
+@mixin respond-to($device) {
+  @media (max-width: map-get($breakpoints, $device)) {
+    @content;
+  }
+}
