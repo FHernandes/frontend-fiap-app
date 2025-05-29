@@ -1,0 +1,98 @@
+@use '../../_utils/devices' as device;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6875rem;
+}
+
+.padding {
+  padding: 0 13.25rem;
+  @include device.respond-to(desktopM) {
+    padding: 0 4rem;
+  }
+
+  @include device.respond-to(mobileLy) {
+    padding: 0 1.375rem;
+  }
+}
+
+.text1 {
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 6.875rem;
+  line-height: 5.8125rem;
+  letter-spacing: -5%;
+  vertical-align: middle;
+
+  @include device.respond-to(desktopM) {
+    font-size: 4.25rem;
+    line-height: 3.8rem;
+  }
+
+  @include device.respond-to(mobileLy) {
+    font-size: 2.25rem;
+    line-height: 2.2rem;
+  }
+}
+
+.indent {
+  margin-left: -4.75rem;
+
+  @include device.respond-to(desktopM) {
+    margin-left: -2.75rem;
+  }
+
+  @include device.respond-to(mobileLy) {
+    margin-left: -1rem;
+  }
+}
+
+.text2 {
+  position: absolute;
+  top: 14.4rem;
+  left: auto;
+  right: auto;
+  z-index: 1;
+  font-weight: 900;
+  font-size: 21.875rem;
+  letter-spacing: -1%;
+  line-height: 21.875rem;
+  color: #0b0c0d;
+  text-transform: uppercase;
+  line-height: 1.6875rem;
+  word-break: break-all;
+  padding: 1.6875rem;
+
+  transform: translateX(50px);
+  opacity: 1;
+  transition: transform 2s ease-in, opacity 2s ease-in;
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+
+  @include device.respond-to(desktopM) {
+    font-size: 16rem;
+    padding: 2rem;
+  }
+
+  @include device.respond-to(mobileLy) {
+    top: 3.5rem;
+    font-size: 9.375rem;
+    line-height: 7.6875rem;
+  }
+
+  @include device.respond-to(mobileLx) {
+    top: 3.5rem;
+    text-align: right;
+    padding: 2rem;
+  }
+}
