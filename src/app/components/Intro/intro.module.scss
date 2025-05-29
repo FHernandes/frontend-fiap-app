@@ -1,0 +1,76 @@
+@use '../../_utils/devices' as device;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6875rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.imersao {
+  position: relative;
+  z-index: 1;
+  width: 1495px;
+
+  @include device.respond-to(desktopXL) {
+    width: 80%;
+  }
+}
+
+.text1 {
+  position: absolute;
+  z-index: 2;
+  top: -9rem;
+
+  font-weight: 500;
+  font-size: 5.1875rem;
+  line-height: 4.8125rem;
+  letter-spacing: -5%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+
+  p {
+    height: 6.4rem;
+    padding-top: 1rem;
+    border-bottom: 2px solid white;
+  }
+
+  @include device.respond-to(desktopM) {
+    font-size: 4.25rem;
+    line-height: 3.8rem;
+  }
+
+  @include device.respond-to(mobileLy) {
+    font-size: 2.25rem;
+    line-height: 2.2rem;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.text2 {
+  position: absolute;
+  bottom: 4.25rem;
+  z-index: 2;
+  overflow: hidden;
+
+  .img-line-left,
+  .img-line-right {
+    flex-shrink: 0;
+    will-change: transform;
+    display: block;
+  }
+}
